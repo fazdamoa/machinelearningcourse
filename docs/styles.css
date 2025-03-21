@@ -1,0 +1,120 @@
+/* Custom Styles for Finance Hub */
+
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Stock cards */
+.stock-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.stock-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.stock-card .card-header {
+    font-weight: bold;
+    border-bottom: none;
+}
+
+/* Stock analysis sections */
+.stock-section {
+    padding: 5rem 0;
+}
+
+.stock-section:nth-child(odd) {
+    background-color: var(--light-color);
+}
+
+.stock-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stock-symbol {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+}
+
+.stock-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+.stock-meta span {
+    margin-right: 1rem;
+}
+
+/* Cards within stock analysis */
+.stock-section .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.stock-section .card-header {
+    background-color: white;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.stock-section .card-header h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Navigation enhancements */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .stock-section {
+        padding: 3rem 0;
+    }
+    
+    .stock-header h2 {
+        font-size: 1.75rem;
+    }
+}
