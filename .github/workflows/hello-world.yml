@@ -1,0 +1,26 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Hello World
+        run: |
+          echo "Hello World!"
+          echo "This is a simple GitHub Actions workflow"
+          echo "Running on $(date)"
+          
+      - name: Environment Info
+        run: |
+          echo "GitHub workspace: $GITHUB_WORKSPACE"
+          echo "GitHub actor: $GITHUB_ACTOR"
+          echo "GitHub repository: $GITHUB_REPOSITORY"
